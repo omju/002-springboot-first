@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common-api" />
+        <module name="springCloudConsulProvider8003" />
+        <module name="springCloudConsumer80" />
+        <module name="SpringCloudEureService7001" />
+        <module name="SpringCloudEurekaService7002" />
+        <module name="springCloudConsulConsumer80" />
+        <module name="springCloudProvider8081" />
+        <module name="springCloudProvider8082" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

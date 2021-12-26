@@ -1,0 +1,28 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_ldk?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8
+    username: root
+    password: 123456
+  application:
+    name: cloud-provider-service
+mybatis-plus:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.edu.ldk.pojo
+  #开启驼峰映射
+  configuration:
+    map-underscore-to-camel-case: true
+
+eureka:
+  client:
+    #表示是否将自己注册进Eurekaserver默认为true。
+    register-with-eureka: true
+    #是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+#      下面这个是一个服务注册到多个中心 集群？？ 是这个意思？？？
+#      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka,http://localhost:7003/eureka
